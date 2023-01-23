@@ -39,15 +39,6 @@ class ViewController: UIViewController {
             if let city = alertController.textFields?[0].text {
                 self.changeCity(city: city)
             }
-            
-            //self.locationLabel.text = alertController.textFields?[0].text
-            //guard let contactName = alertController.textFields?[0].text,
-                  //let contactPhone = alertController.textFields?[1].text else { return }
-            
-            //создаем новый контакт
-//            let contact =  Contact(title: contactName, phone: contactPhone)
-//            self.contacts.append(contact)
-//            self.tableView.reloadData()
         }
         
         // кнопка отмена
