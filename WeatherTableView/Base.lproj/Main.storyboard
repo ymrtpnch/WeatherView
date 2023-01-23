@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moscow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiR-zM-hmZ">
+                                <rect key="frame" x="115" y="84" width="163" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO0-mi-WgS">
+                                <rect key="frame" x="96" y="754" width="201" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Terms and Agreements"/>
+                                <connections>
+                                    <action selector="didTapTermsButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlJ-g9-eYo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGZ-3V-PKG">
+                                <rect key="frame" x="139" y="139" width="115" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change city"/>
+                                <connections>
+                                    <action selector="changeCityAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vba-gN-uSM"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01n" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-sa-cun">
+                                <rect key="frame" x="86.666666666666686" y="234" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="FgO-Bu-sfs"/>
+                                    <constraint firstAttribute="width" constant="220" id="M9W-lg-Jch"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rainy Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwl-i0-ePY">
+                                <rect key="frame" x="146.66666666666666" y="474" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-Vr-NuK">
+                                <rect key="frame" x="158" y="555" width="77" height="77.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8D-9U-PKT">
+                                <rect key="frame" x="241" y="593.33333333333337" width="28" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C8D-9U-PKT" firstAttribute="leading" secondItem="6b9-Vr-NuK" secondAttribute="trailing" constant="6" id="IEE-S7-CxG"/>
+                            <constraint firstItem="2sS-sa-cun" firstAttribute="top" secondItem="eGZ-3V-PKG" secondAttribute="bottom" constant="60" id="J4K-70-h2P"/>
+                            <constraint firstItem="6b9-Vr-NuK" firstAttribute="top" secondItem="Cwl-i0-ePY" secondAttribute="bottom" constant="60" id="KIF-sb-KTu"/>
+                            <constraint firstItem="C8D-9U-PKT" firstAttribute="firstBaseline" secondItem="6b9-Vr-NuK" secondAttribute="firstBaseline" id="KYd-vx-5Tb"/>
+                            <constraint firstItem="EiR-zM-hmZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXh-bG-mSC"/>
+                            <constraint firstItem="2sS-sa-cun" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RhC-fc-2rK"/>
+                            <constraint firstItem="EiR-zM-hmZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="S1P-1L-fx0"/>
+                            <constraint firstItem="QO0-mi-WgS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tcy-zk-3jS"/>
+                            <constraint firstItem="Cwl-i0-ePY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Txq-zK-Shj"/>
+                            <constraint firstItem="6b9-Vr-NuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WVU-ng-IPc"/>
+                            <constraint firstItem="Cwl-i0-ePY" firstAttribute="top" secondItem="2sS-sa-cun" secondAttribute="bottom" constant="20" id="dkO-02-o7D"/>
+                            <constraint firstItem="eGZ-3V-PKG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="doH-Qs-fzg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QO0-mi-WgS" secondAttribute="bottom" constant="29" id="dpj-el-nEy"/>
+                            <constraint firstItem="eGZ-3V-PKG" firstAttribute="top" secondItem="EiR-zM-hmZ" secondAttribute="bottom" constant="1" id="nPC-7v-9C9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="conditionWeather" destination="Cwl-i0-ePY" id="PmY-8H-3jc"/>
+                        <outlet property="locationLabel" destination="EiR-zM-hmZ" id="w0w-MP-Epe"/>
+                        <outlet property="temperature" destination="6b9-Vr-NuK" id="pMH-T9-gHu"/>
+                        <outlet property="weatherImage" destination="2sS-sa-cun" id="aRw-lR-rp0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="01n" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

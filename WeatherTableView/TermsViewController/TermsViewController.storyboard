@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" id="Y6W-OH-hqX" customClass="TermsViewController" customModule="WeatherTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-4F-bOr">
+                                <rect key="frame" x="20" y="69" width="353" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="erU-3n-6M3"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque turpis, imperdiet sed felis a, aliquet sodales libero. Curabitur mi orci, bibendum a mauris rutrum, dictum convallis libero. Suspendisse sollicitudin aliquet lorem, tempor faucibus arcu molestie vitae. Cras pharetra urna vitae hendrerit vestibulum. Proin a leo eu tortor blandit maximus. 
+Aenean finibus mollis urna in tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante leo, ultrices id suscipit at, pulvinar euismod metus. Praesent fermentum, justo non ultrices tincidunt, erat nunc semper risus, elementum aliquam ipsum metus posuere neque. Ut finibus rutrum nunc, quis rutrum lacus elementum in. Sed metus odio, efficitur ac iaculis ac, pulvinar at lacus. Duis quis purus non purus vehicula pretium a a dui. Maecenas pulvinar volutpat pellentesque. Pellentesque interdum eget turpis a egestas. Aenean finibus mollis urna in tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ante leo, ultrices id suscipit at, pulvinar euismod metus. Praesent fermentum, justo non ultrices tincidunt, erat nunc semper risus, elementum aliquam ipsum metus posuere neque. Ut finibus rutrum nunc, quis rutrum lacus elementum in. Sed metus odio, efficitur ac iaculis ac, pulvinar at lacus. Duis quis purus non purus vehicula pretium a a dui. Maecenas pulvinar volutpat pellentesque. Pellentesque interdum eget turpis a egestas. Aenean ut lobortis leo.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dLE-4F-bOr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="M2U-QP-Pwm"/>
+                            <constraint firstItem="dLE-4F-bOr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Qhx-Qh-qfV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dLE-4F-bOr" secondAttribute="trailing" constant="20" id="erF-oR-DLj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
