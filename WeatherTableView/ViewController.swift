@@ -52,6 +52,14 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    //Переход на таблицу городов
+    @IBAction func pushCitiesTableViewController () {
+        let storyboard = UIStoryboard(name: "CitiesTableViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CitiesTableViewController") as! CitiesTableViewController //иниициализ ВС по айдишнику
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //MARK: - Other Func
     //Проверяет существование города в базе Openwether
     func changeCity(city: String){

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cities Table View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CitiesTableViewController" id="Y6W-OH-hqX" customClass="CitiesTableViewController" customModule="WeatherTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jeo-vt-TAm">
+                                <rect key="frame" x="10" y="109" width="373" height="609"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="P3X-jd-bjO"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="IhZ-e5-3it"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lb-Cj-xI2">
+                                <rect key="frame" x="152" y="738" width="89" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add City"/>
+                                <connections>
+                                    <action selector="showNewCityAlert" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tov-tm-De9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4lb-Cj-xI2" firstAttribute="top" secondItem="jeo-vt-TAm" secondAttribute="bottom" constant="20" id="MS6-zk-ACG"/>
+                            <constraint firstItem="4lb-Cj-xI2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RF4-iX-eG9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jeo-vt-TAm" secondAttribute="trailing" constant="10" id="Wnd-xR-NPG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jeo-vt-TAm" secondAttribute="bottom" constant="100" id="lLa-qm-bnV"/>
+                            <constraint firstItem="jeo-vt-TAm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="rzr-0b-KB3"/>
+                            <constraint firstItem="jeo-vt-TAm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="zqV-OB-Ygk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jeo-vt-TAm" id="fqh-fV-FeK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
